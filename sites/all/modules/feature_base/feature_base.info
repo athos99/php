@@ -20,4 +20,7 @@ features[features_api][] = api:2
 features[filter][] = filtered_html
 features[filter][] = full_html
 features[filter][] = plain_text
+features[variable][] = admin_theme
 features[variable][] = jquery_update_jquery_version
+features[variable][] = node_admin_theme
+features[variable][] = theme_tweme_settings

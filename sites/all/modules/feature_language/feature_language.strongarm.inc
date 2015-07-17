@@ -59,6 +59,8 @@ node/*/revisions/*/revert
 node/*/revisions/*/delete
 node/add
 node/add/*
+overlay/dismiss-message
+user/*/shortcuts
 admin
 admin/*
 batch

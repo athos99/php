@@ -59,8 +59,6 @@ node/*/revisions/*/revert
 node/*/revisions/*/delete
 node/add
 node/add/*
-overlay/dismiss-message
-user/*/shortcuts
 admin
 admin/*
 batch
@@ -151,14 +149,14 @@ admin/reports/status/php',
     'language' => 'fr',
     'name' => 'French',
     'native' => 'Français',
-    'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '2',
-    'formula' => '($n>1)',
+    'direction' => 0,
+    'enabled' => 1,
+    'plurals' => 0,
+    'formula' => '',
     'domain' => '',
     'prefix' => 'fr',
-    'weight' => '0',
-    'javascript' => 'NNIP1SiEFcIPpEwZ84CrbOm-5bqUBSA4Hm3so2uJrpA',
+    'weight' => 0,
+    'javascript' => '',
   );
   $export['language_default'] = $strongarm;
 

@@ -13,6 +13,43 @@ function feature_language_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'admin_language_force_default';
+  $strongarm->value = '0';
+  $export['admin_language_force_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'admin_language_force_neutral';
+  $strongarm->value = '0';
+  $export['admin_language_force_neutral'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'admin_language_hide_node';
+  $strongarm->value = '0';
+  $export['admin_language_hide_node'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'admin_language_hide_user';
+  $strongarm->value = '0';
+  $export['admin_language_hide_user'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'admin_language_pages';
+  $strongarm->value = 'admin_menu/*
+file/ajax/*
+system/ajax';
+  $export['admin_language_pages'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'admin_language_path_is_admin_paths';
   $strongarm->value = array(
     'admin' => 'node/*/edit
@@ -35,6 +72,27 @@ user/*/edit/*',
 admin/reports/status/php',
   );
   $export['admin_language_path_is_admin_paths'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'admin_language_translate_admin_menu';
+  $strongarm->value = '0';
+  $export['admin_language_translate_admin_menu'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'admin_language_use_path_is_admin';
+  $strongarm->value = 1;
+  $export['admin_language_use_path_is_admin'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'admin_language_visibility';
+  $strongarm->value = '1';
+  $export['admin_language_visibility'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -81,19 +139,26 @@ admin/reports/status/php',
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_count';
+  $strongarm->value = 2;
+  $export['language_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_default';
   $strongarm->value = (object) array(
     'language' => 'fr',
     'name' => 'French',
     'native' => 'Français',
-    'direction' => 0,
-    'enabled' => 1,
-    'plurals' => 2,
+    'direction' => '0',
+    'enabled' => '1',
+    'plurals' => '2',
     'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'fr',
-    'weight' => 0,
-    'javascript' => '',
+    'weight' => '0',
+    'javascript' => 'NNIP1SiEFcIPpEwZ84CrbOm-5bqUBSA4Hm3so2uJrpA',
   );
   $export['language_default'] = $strongarm;
 
@@ -139,6 +204,24 @@ admin/reports/status/php',
     ),
   );
   $export['language_negotiation_language_url'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_types';
+  $strongarm->value = array(
+    'language' => TRUE,
+    'language_content' => FALSE,
+    'language_url' => FALSE,
+  );
+  $export['language_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'locale_language_negotiation_url_part';
+  $strongarm->value = '0';
+  $export['locale_language_negotiation_url_part'] = $strongarm;
 
   return $export;
 }

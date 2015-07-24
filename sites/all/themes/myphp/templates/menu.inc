@@ -4,12 +4,40 @@
  * Theme and preprocess functions for menus
  */
 
+
+
+
+
 /**
- * Implements theme_menu_tree().
+ * Overrides theme_menu_tree().
  */
 function myphp_menu_tree(&$variables) {
     return '<ul class="menu nav">' . $variables['tree'] . '</ul>';
 }
+
+/**
+ * Bootstrap theme wrapper function for the primary menu links.
+ */
+function myphp_menu_tree__primary(&$variables) {
+    return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Bootstrap theme wrapper function for the secondary menu links.
+ */
+function myphp_menu_tree__secondary(&$variables) {
+    return '<ul class="menu nav navbar-nav secondary">' . $variables['tree'] . '</ul>';
+}
+
+
+
+
+
+
+
+
+
+
 
 /**
  * Implements theme_menu_tree__menu_block().

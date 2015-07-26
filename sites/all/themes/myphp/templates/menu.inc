@@ -35,80 +35,6 @@ function myphp_menu_tree__secondary(&$variables) {
 
 
 
-
-
-
-
-/**
- * Implements theme_menu_tree__menu_block().
- */
-function myphp_menu_tree__menu_block(&$variables) {
-    return '<ul class="menu nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
-}
-
-/**
- * Implements theme_menu_tree__navbar_nav().
- */
-function myphp_menu_tree__navbar_nav(&$variables) {
-    return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';
-}
-
-/**
- * Implements theme_menu_tree__navbar_left().
- */
-function myphp_menu_tree__navbar_left(&$variables) {
-    return '<ul class="menu nav navbar-nav navbar-left">' . $variables['tree'] . '</ul>';
-}
-
-/**
- * Implements theme_menu_tree__navbar_right().
- */
-function myphp_menu_tree__navbar_right(&$variables) {
-    return '<ul class="menu nav navbar-nav navbar-right">' . $variables['tree'] . '</ul>';
-}
-
-/**
- * Implements theme_menu_tree__nav_tabs().
- */
-function myphp_menu_tree__nav_tabs(&$variables) {
-    return '<ul class="nav nav-tabs">' . $variables['tree'] . '</ul>';
-}
-
-/**
- * Implements theme_menu_tree__nav_tabs_justified().
- */
-function myphp_menu_tree__nav_tabs_justified(&$variables) {
-    return '<ul class="nav nav-tabs nav-justified">' . $variables['tree'] . '</ul>';
-}
-
-/**
- * Implements theme_menu_tree__nav_pills().
- */
-function myphp_menu_tree__nav_pills(&$variables) {
-    return '<ul class="nav nav-pills">' . $variables['tree'] . '</ul>';
-}
-
-/**
- * Implements theme_menu_tree__nav_pills_stacked().
- */
-function myphp_menu_tree__nav_pills_stacked(&$variables) {
-    return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
-}
-
-/**
- * Implements theme_menu_tree__nav_pills_justified().
- */
-function myphp_menu_tree__nav_pills_justified(&$variables) {
-    return '<ul class="nav nav-pills nav-justified">' . $variables['tree'] . '</ul>';
-}
-
-/**
- * Implements theme_menu_tree__nav_expanded().
- */
-function myphp_menu_tree__nav_expanded(&$variables) {
-    return '<ul class="nav nav-expanded nav-justified">' . $variables['tree'] . '</ul>';
-}
-
 /**
  * Implements theme_menu_link().
  */
@@ -133,7 +59,7 @@ function myphp_menu_link($variables) {
             $element['#title'] .= '<span class="caret"></span>';
         }
 
-        $element['#localized_options']['attributes']['data-target'] = '#';
+       // $element['#localized_options']['attributes']['data-target'] = '#';
     }
 
     // Fix for active class.

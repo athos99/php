@@ -1,0 +1,1 @@
+Drupal.locale = { 'strings': {"":{"Loading":"En cours de chargement","No results":"Aucun r\u00e9sultat","All":"Tout","New":"Nouveau","Recent":"R\u00e9cent","@title dialog":"dialogue de @title","Configure":"Configurer","Hide":"Masquer","Show":"Afficher","Hide description":"Masquer la description","Show description":"Afficher la description"}} };

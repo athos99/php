@@ -55,8 +55,6 @@ function feature_base_views_default_views() {
     'rubric' => 'rubric',
   );
   $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['validate']['fail'] = 'ignore';
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['not'] = 0;
   /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';

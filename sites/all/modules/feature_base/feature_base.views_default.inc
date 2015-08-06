@@ -42,19 +42,6 @@ function feature_base_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Search: Indexed taxonomy term fields */
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['id'] = 'search_api_views_taxonomy_term';
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['field'] = 'search_api_views_taxonomy_term';
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['validate_options']['vocabularies'] = array(
-    'rubric' => 'rubric',
-  );
-  $handler->display->display_options['arguments']['search_api_views_taxonomy_term']['validate']['fail'] = 'ignore';
   /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
@@ -64,8 +51,8 @@ function feature_base_views_default_views() {
   );
 
   /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'taxonomy/term/%';
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['path'] = 'rubric';
   $translatables['search_taxonmy_term'] = array(
     t('Master'),
     t('search taxonmy term'),
@@ -85,7 +72,6 @@ function feature_base_views_default_views() {
     t('Node ID'),
     t('.'),
     t(','),
-    t('All'),
     t('Page'),
   );
   $export['search_taxonmy_term'] = $view;

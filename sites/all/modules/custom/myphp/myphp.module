@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Drupal hooks and functions to work with taxonomy terms.
+ *
+ * Redirect URL can be set for each separate taxonomy term.
+ *
+ *
+ * (C) Neurones technologies
+ * author : Michel Bobillier
+ */
+
+
+
+
+/**
+ * Implements hook_taxonomy_menu_path().
+ */
+function myphp_taxonomy_menu_path()
+{
+    $output = array(
+        'myphp_path_default' => t('Rubric'),
+    );
+
+    return $output;
+}
+
+
+
+/**
+ * Callback for hook_taxonomy_menu_path
+ */
+function myphp_path_default($vid, $tid) {
+    // if tid = 0 then we are creating the vocab menu item format will be taxonomy/term/$tid+$tid+$tid....
+    if ($tid == 0) {
+        // get all of the terms for the vocab
+        $vtids = _taxonomy_menu_get_terms($vid);
+        $end = implode(' ', $vtids);
+        $path = "taxonomy/term/".$end;
+    }
+    else {
+        $parents=taxonomy_get_parents_all($tid);
+        $i=0;
+        while( $term = array_pop($parents )) {
+            $data['f['.$i++.']'] = 'field_rubric:'.$term->tid;
+        }
+
+
+        $path = 'rubric?'.http_build_query($data);
+    }
+    return $path;
+}

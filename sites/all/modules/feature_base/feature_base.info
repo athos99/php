@@ -18,6 +18,7 @@ dependencies[] = l10n_update
 dependencies[] = libraries
 dependencies[] = locale
 dependencies[] = module_filter
+dependencies[] = myphp
 dependencies[] = search_api
 dependencies[] = search_api_db
 dependencies[] = strongarm

@@ -225,7 +225,7 @@ function feature_base_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'taxonomy_menu_path_rubric';
-  $strongarm->value = 'taxonomy_menu_path_default';
+  $strongarm->value = 'myphp_path_default';
   $export['taxonomy_menu_path_rubric'] = $strongarm;
 
   $strongarm = new stdClass();

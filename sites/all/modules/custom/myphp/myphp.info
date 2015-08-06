@@ -1,0 +1,7 @@
+name = Myphp module
+description = This module add sepcifique functionnality for PHP
+package = myPhp
+core = 7.x
+dependencies[] = taxonomy
+
+

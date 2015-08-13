@@ -3,6 +3,7 @@ description = This module add sepcifique functionnality for PHP
 package = myPhp
 core = 7.x
 dependencies[] = taxonomy
+dependencies[] = masonry
 
 
 files[] = plugins/myphp_grid_plugin_style.inc

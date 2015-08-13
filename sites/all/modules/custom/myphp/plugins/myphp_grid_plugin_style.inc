@@ -6,7 +6,7 @@
 class MyphpGridPluginStyle extends views_plugin_style
 {
     const grid_conf = array(
-        array('name' => 'Large device', 'index' => 'lg', 'active' => false),
+        array('name' => 'Large device', 'index' => 'lg', 'active' => true),
         array('name' => 'Medium device', 'index' => 'md', 'active' => true),
         array('name' => 'Small device', 'index' => 'sm', 'active' => false),
         array('name' => 'Extra small device', 'index' => 'xs', 'active' => false)
@@ -24,9 +24,9 @@ class MyphpGridPluginStyle extends views_plugin_style
             $index = $grid['index'];
             $options[$index]['default']['enable'] =  $grid['active'];
             $options[$index]['default']['nb_columns'] = 3;
-            $options[$index]['default']['nb_items1'] = 8;
+            $options[$index]['default']['nb_items1'] = 0;
             $options[$index]['default']['nb_columns1'] = 2;
-            $options[$index]['default']['nb_items2'] = 4;
+            $options[$index]['default']['nb_items2'] = 0;
             $options[$index]['default']['nb_columns2'] = 1;
         }
         return $options;

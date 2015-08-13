@@ -11,18 +11,18 @@ function feature_base_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'search_taxonmy_term';
+  $view->name = 'rubtic';
   $view->description = '';
   $view->tag = 'default';
-  $view->base_table = 'search_api_index_default_node_index';
-  $view->human_name = 'search taxonmy term';
+  $view->base_table = 'search_api_index_search_node_index';
+  $view->human_name = 'rubtic';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'search taxonmy term';
+  $handler->display->display_options['title'] = 'rubtic';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -35,27 +35,28 @@ function feature_base_views_default_views() {
   $handler->display->display_options['row_options']['view_mode'] = 'teaser';
   /* Field: Indexed Node: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   /* Sort criterion: Indexed Node: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
-  $handler->display->display_options['path'] = 'rubric';
-  $translatables['search_taxonmy_term'] = array(
+  /* Display: Rubric */
+  $handler = $view->new_display('page', 'Rubric', 'page');
+  $handler->display->display_options['display_description'] = 'Rubric';
+  $handler->display->display_options['path'] = 'rubtic';
+  $translatables['rubtic'] = array(
     t('Master'),
-    t('search taxonmy term'),
+    t('rubtic'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -72,9 +73,9 @@ function feature_base_views_default_views() {
     t('Node ID'),
     t('.'),
     t(','),
-    t('Page'),
+    t('Rubric'),
   );
-  $export['search_taxonmy_term'] = $view;
+  $export['rubtic'] = $view;
 
   return $export;
 }

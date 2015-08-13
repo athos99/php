@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements hook_views_plugins().
+   * Implements hook_views_plugins().
  */
 function myphp_views_plugins() {
   $module_path = drupal_get_path('module', 'myphp');
@@ -13,8 +13,8 @@ function myphp_views_plugins() {
   return array(
     'style' => array(
       'myphp_grid_plugin_style' => array(
-        'title' => t('Bootstrap Grid'),
-        'help' => t('Bootstrap Grid Style'),
+        'title' => t('Bootstrap Vari Grid'),
+        'help' => t('Bootstrap Vari Grid Style'),
         'path' => $module_path . '/plugins',
         'handler' => 'MyphpGridPluginStyle',
         'parent' => 'default',

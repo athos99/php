@@ -22,15 +22,50 @@ function feature_base_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'rubtic';
+  $handler->display->display_options['title'] = 'Rubric';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['style_plugin'] = 'myphp_grid_plugin_style';
+  $handler->display->display_options['style_options']['lg'] = array(
+    'enable' => 1,
+    'nb_columns' => '3',
+    'nb_items1' => '0',
+    'nb_columns1' => '2',
+    'nb_items2' => '0',
+    'nb_columns2' => '1',
+  );
+  $handler->display->display_options['style_options']['md'] = array(
+    'enable' => 0,
+    'nb_columns' => '1',
+    'nb_items1' => '8',
+    'nb_columns1' => '2',
+    'nb_items2' => '4',
+    'nb_columns2' => '1',
+  );
+  $handler->display->display_options['style_options']['sm'] = array(
+    'enable' => 0,
+    'nb_columns' => '1',
+    'nb_items1' => '8',
+    'nb_columns1' => '2',
+    'nb_items2' => '4',
+    'nb_columns2' => '1',
+  );
+  $handler->display->display_options['style_options']['xs'] = array(
+    'enable' => 0,
+    'nb_columns' => '1',
+    'nb_items1' => '8',
+    'nb_columns1' => '2',
+    'nb_items2' => '4',
+    'nb_columns2' => '1',
+  );
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'teaser';
   /* Field: Indexed Node: Node ID */
@@ -50,13 +85,17 @@ function feature_base_views_default_views() {
     'article' => 'article',
   );
 
-  /* Display: Rubric */
-  $handler = $view->new_display('page', 'Rubric', 'page');
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['display_description'] = 'Rubric';
-  $handler->display->display_options['path'] = 'rubtic';
+  $handler->display->display_options['path'] = 'rubric';
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['path'] = 'rubric/%';
   $translatables['rubtic'] = array(
     t('Master'),
-    t('rubtic'),
+    t('Rubric'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -73,7 +112,7 @@ function feature_base_views_default_views() {
     t('Node ID'),
     t('.'),
     t(','),
-    t('Rubric'),
+    t('Page'),
   );
   $export['rubtic'] = $view;
 

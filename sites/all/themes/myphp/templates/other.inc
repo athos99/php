@@ -12,18 +12,29 @@ function myphp_facetapi_deactivate_widget($variables)
     return '(-)';
 }
 
-
-
-function myphp_preprocess_views_view(&$vars)
+function myphp_node_view_alter(&$build)
 {
-    $size = count($vars['view']->result);
-    if ($size <= 3) {
-        $classSize = 'l';
-    } elseif ($size <= 6) {
-        $classSize = 'm';
-    } else {
-        $classSize = 's';
+    if ($build['#view_mode'] == 'full' && isset($build['an_additional_field'])) {
+        // Change its weight.
+        $build['an_additional_field']['#weight'] = -10;
     }
-    $vars['classes_array'][] = 'myphp_size_' . $classSize;
+
+    // Add a #post_render callback to act on the rendered HTML of the node.
+    $build['#post_render'][] = 'my_module_node_post_render';
 }
+
+
+function myphp_preprocess_node(&$variables)
+{
+    $a = 1;
+}
+
+
+function myphp_preprocess_node__article(&$variables)
+{
+    $a = 1;
+}
+
+
+
 

@@ -148,39 +148,6 @@ function feature_base_default_search_api_server() {
       "min_chars" : "1",
       "partial_matches" : 0,
       "indexes" : { "search_node_index" : {
-          "field_tags" : {
-            "table" : "search_api_db_search_node_index_field_tags",
-            "column" : "value",
-            "type" : "list\\u003Cinteger\\u003E",
-            "boost" : "1.0"
-          },
-          "field_rubric" : {
-            "table" : "search_api_db_search_node_index_field_rubric",
-            "column" : "field_rubric",
-            "type" : "list\\u003Cinteger\\u003E",
-            "boost" : "1.0"
-          },
-          "search_api_language" : {
-            "table" : "search_api_db_search_node_index",
-            "column" : "search_api_language",
-            "type" : "string",
-            "boost" : "1.0"
-          },
-          "search_api_viewed" : {
-            "table" : "search_api_db_search_node_index_text",
-            "type" : "text",
-            "boost" : "1.0"
-          },
-          "body:value" : {
-            "table" : "search_api_db_search_node_index_text",
-            "type" : "text",
-            "boost" : "1.0"
-          },
-          "body:summary" : {
-            "table" : "search_api_db_search_node_index_text",
-            "type" : "text",
-            "boost" : "1.0"
-          },
           "type" : {
             "table" : "search_api_db_search_node_index",
             "column" : "type",
@@ -208,6 +175,39 @@ function feature_base_default_search_api_server() {
             "table" : "search_api_db_search_node_index",
             "column" : "author",
             "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_tags" : {
+            "table" : "search_api_db_search_node_index_field_tags",
+            "column" : "value",
+            "type" : "list\\u003Cinteger\\u003E",
+            "boost" : "1.0"
+          },
+          "field_rubric" : {
+            "table" : "search_api_db_search_node_index_field_rubric",
+            "column" : "value",
+            "type" : "list\\u003Cinteger\\u003E",
+            "boost" : "1.0"
+          },
+          "search_api_language" : {
+            "table" : "search_api_db_search_node_index",
+            "column" : "search_api_language",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "search_api_viewed" : {
+            "table" : "search_api_db_search_node_index_text",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "body:value" : {
+            "table" : "search_api_db_search_node_index_text",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "body:summary" : {
+            "table" : "search_api_db_search_node_index_text",
+            "type" : "text",
             "boost" : "1.0"
           }
         }

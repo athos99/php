@@ -135,7 +135,7 @@ admin/reports/status/php',
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'l10n_update_import_mode';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['l10n_update_import_mode'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -161,13 +161,13 @@ admin/reports/status/php',
     'name' => 'French',
     'native' => 'Français',
     'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '2',
-    'formula' => '($n>1)',
+    'enabled' => 1,
+    'plurals' => '0',
+    'formula' => '',
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '0',
-    'javascript' => 'CEEhjFnmUwvmIcul_Nfro0qfWtTIW1ZcuUI0XiVTlFc',
+    'javascript' => '',
   );
   $export['language_default'] = $strongarm;
 

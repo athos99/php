@@ -6,11 +6,6 @@ function myphp_views_api() {
 }
 
 
-
-
-
-
-
 /**
  * Implements hook_taxonomy_menu_path().
  */

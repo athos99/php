@@ -29,12 +29,4 @@ function feature_base_enable()
 
     theme_disable(array('bartik', 'responsive_bartik'));
 
-    // Allow anonymous and authenticated users to search content
-   // user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('search content'));
-   // user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('search content'));
-  //  module_enable(array('search_api_db'));
-//    $database_server = search_api_server_load('database_server');
-//    $database_index = search_api_index_load('database_node_index');
- //   $database_server->fieldsUpdated($database_index);
-
 }

@@ -183,12 +183,6 @@ function feature_base_default_search_api_server() {
             "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"
           },
-          "field_rubric" : {
-            "table" : "search_api_db_search_node_index_field_rubric",
-            "column" : "value",
-            "type" : "list\\u003Cinteger\\u003E",
-            "boost" : "1.0"
-          },
           "search_api_language" : {
             "table" : "search_api_db_search_node_index",
             "column" : "search_api_language",
@@ -208,6 +202,12 @@ function feature_base_default_search_api_server() {
           "body:summary" : {
             "table" : "search_api_db_search_node_index_text",
             "type" : "text",
+            "boost" : "1.0"
+          },
+          "field_rubric" : {
+            "table" : "search_api_db_search_node_index_field_rubric",
+            "column" : "value",
+            "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"
           }
         }

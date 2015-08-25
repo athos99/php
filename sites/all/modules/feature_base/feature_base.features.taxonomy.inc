@@ -10,12 +10,14 @@
 function feature_base_taxonomy_default_vocabularies() {
   return array(
     'rubric' => array(
-      'name' => 'Rubric',
+      'name' => 'Rubrique',
       'machine_name' => 'rubric',
       'description' => 'Rubric',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -39,6 +41,8 @@ function feature_base_taxonomy_default_vocabularies() {
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 0,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

@@ -95,6 +95,34 @@ function feature_base_facetapi_default_facet_settings() {
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
   $facet->api_version = 1;
+  $facet->name = 'search_api@search_node_index::field_rubric';
+  $facet->searcher = 'search_api@search_node_index';
+  $facet->realm = '';
+  $facet->facet = 'field_rubric';
+  $facet->enabled = FALSE;
+  $facet->settings = array(
+    'operator' => 'and',
+    'hard_limit' => '-1',
+    'dependencies' => array(
+      'bundle' => 'none',
+      'bundle_selected' => array(),
+      'roles' => array(),
+    ),
+    'facet_mincount' => '1',
+    'facet_missing' => '0',
+    'flatten' => '0',
+    'individual_parent' => '0',
+    'query_type' => 'term',
+    'limit_active_items' => 0,
+    'default_true' => '1',
+    'facet_search_ids' => array(),
+    'exclude' => 0,
+  );
+  $export['search_api@search_node_index::field_rubric'] = $facet;
+
+  $facet = new stdClass();
+  $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
+  $facet->api_version = 1;
   $facet->name = 'search_api@search_node_index:block:author';
   $facet->searcher = 'search_api@search_node_index';
   $facet->realm = 'block';
@@ -271,7 +299,7 @@ function feature_base_facetapi_default_facet_settings() {
     'facet_fewer_text' => 'Show fewer',
     'soft_limit' => '20',
     'nofollow' => 1,
-    'show_expanded' => 0,
+    'show_expanded' => 1,
     'empty_text' => array(
       'value' => '',
       'format' => 'filtered_html',

@@ -22,7 +22,6 @@ function feature_base_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Rubric';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -85,35 +84,8 @@ function feature_base_views_default_views() {
     'article' => 'article',
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['display_description'] = 'Rubric';
-  $handler->display->display_options['path'] = 'rubric';
-
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
-  $handler->display->display_options['path'] = 'rubric/%';
-  $translatables['rubtic'] = array(
-    t('Master'),
-    t('Rubric'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Node ID'),
-    t('.'),
-    t(','),
-    t('Page'),
-  );
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block_1');
   $export['rubtic'] = $view;
 
   return $export;

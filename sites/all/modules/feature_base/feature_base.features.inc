@@ -14,6 +14,9 @@ function feature_base_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
+  if ($module == "panelizer" && $api == "panelizer") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -180,12 +183,6 @@ function feature_base_default_search_api_server() {
             "type" : "integer",
             "boost" : "1.0"
           },
-          "field_tags" : {
-            "table" : "search_api_db_search_node_index_field_tags",
-            "column" : "value",
-            "type" : "list\\u003Cinteger\\u003E",
-            "boost" : "1.0"
-          },
           "search_api_language" : {
             "table" : "search_api_db_search_node_index",
             "column" : "search_api_language",
@@ -209,6 +206,12 @@ function feature_base_default_search_api_server() {
           },
           "field_rubric" : {
             "table" : "search_api_db_search_node_index_field_rubric",
+            "column" : "value",
+            "type" : "list\\u003Cinteger\\u003E",
+            "boost" : "1.0"
+          },
+          "field_tags" : {
+            "table" : "search_api_db_search_node_index_field_tags",
             "column" : "value",
             "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"

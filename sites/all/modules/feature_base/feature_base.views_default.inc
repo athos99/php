@@ -11,11 +11,11 @@ function feature_base_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'rubtic';
+  $view->name = 'rubric';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'search_api_index_search_node_index';
-  $view->human_name = 'rubtic';
+  $view->human_name = 'rubric';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -28,7 +28,7 @@ function feature_base_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '9';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
@@ -36,9 +36,9 @@ function feature_base_views_default_views() {
   $handler->display->display_options['style_options']['lg'] = array(
     'enable' => 1,
     'nb_columns' => '3',
-    'nb_items1' => '0',
+    'nb_items1' => '6',
     'nb_columns1' => '2',
-    'nb_items2' => '0',
+    'nb_items2' => '3',
     'nb_columns2' => '1',
   );
   $handler->display->display_options['style_options']['md'] = array(
@@ -86,7 +86,27 @@ function feature_base_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
-  $export['rubtic'] = $view;
+  $translatables['rubric'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Node ID'),
+    t('.'),
+    t(','),
+    t('Block'),
+  );
+  $export['rubric'] = $view;
 
   return $export;
 }

@@ -13,6 +13,13 @@ function feature_language_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'admin_language_default';
+  $strongarm->value = 'en';
+  $export['admin_language_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'admin_language_force_default';
   $strongarm->value = '0';
   $export['admin_language_force_default'] = $strongarm;
@@ -59,7 +66,6 @@ node/*/revisions/*/revert
 node/*/revisions/*/delete
 node/add
 node/add/*
-overlay/dismiss-message
 user/*/shortcuts
 admin
 admin/*
@@ -68,6 +74,11 @@ taxonomy/term/*/edit
 user/*/cancel
 user/*/edit
 user/*/edit/*
+taxonomy/*/translate
+taxonomy/*/translate/*
+node/*/panelizer*
+taxonomy/term/*/panelizer*
+user/*/panelizer*
 devel/*
 node/*/devel
 node/*/devel/*
@@ -162,12 +173,12 @@ admin/reports/status/php',
     'native' => 'Français',
     'direction' => '0',
     'enabled' => 1,
-    'plurals' => '0',
-    'formula' => '',
+    'plurals' => '2',
+    'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '0',
-    'javascript' => '',
+    'javascript' => 'GmaHgfJ_m_DrkwzczCVt46yhTqOoWboxmEBkbNsCcF4',
   );
   $export['language_default'] = $strongarm;
 

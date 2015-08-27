@@ -22,7 +22,7 @@ function feature_base_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -61,7 +61,7 @@ function feature_base_field_default_field_instances() {
         'settings' => array(
           'title_class' => '',
           'title_link' => '',
-          'title_style' => '',
+          'title_style' => 'h1',
         ),
         'type' => 'title_linked',
         'weight' => 0,

@@ -38,7 +38,7 @@ function feature_base_taxonomy_default_vocabularies() {
       'name' => 'Rubrique',
       'machine_name' => 'rubric',
       'description' => 'Rubric',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',

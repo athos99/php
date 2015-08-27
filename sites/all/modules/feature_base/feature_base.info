@@ -85,6 +85,7 @@ features[taxonomy][] = css_class
 features[taxonomy][] = rubric
 features[variable][] = comment_anonymous_article
 features[variable][] = comment_article
+features[variable][] = comment_default_mode_article
 features[variable][] = comment_default_per_page_article
 features[variable][] = comment_form_location_article
 features[variable][] = comment_preview_article

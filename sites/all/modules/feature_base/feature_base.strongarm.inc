@@ -27,13 +27,6 @@ function feature_base_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_article';
-  $strongarm->value = 1;
-  $export['comment_default_mode_article'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_article';
   $strongarm->value = '50';
   $export['comment_default_per_page_article'] = $strongarm;
@@ -237,11 +230,6 @@ function feature_base_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
-      'rss' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
     ),
   );
   $export['panelizer_defaults_node_article'] = $strongarm;
@@ -263,17 +251,7 @@ function feature_base_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
-      'full' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
       'teaser' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'rss' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,
@@ -295,11 +273,6 @@ function feature_base_strongarm() {
         'choice' => 0,
       ),
       'default' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'full' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,

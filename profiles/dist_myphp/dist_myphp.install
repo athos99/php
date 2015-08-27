@@ -4,7 +4,39 @@
  *
  * Perform actions to set up the site for this profile.
  */
-function dist_myphp_install() {
+function dist_myphp_install()
+{
     include_once DRUPAL_ROOT . '/profiles/standard/standard.install';
     standard_install();
+
+
+    $blocks = array(
+        array(
+            'module' => 'search',
+            'delta' => 'form',
+        ),
+        array(
+            'module' => 'user',
+            'delta' => 'login',
+        ),
+        array(
+            'module' => 'system',
+            'delta' => 'navigation',
+        ),
+        array(
+            'module' => 'system',
+            'delta' => 'powered-by',
+        ),
+        array(
+            'module' => 'system',
+            'delta' => 'help',
+        ),
+    );
+    foreach ($blocks as $block) {
+        db_update('block')
+            ->fields(array('region' => -1, 'status' => 0))
+            ->condition('module', $block['module'])
+            ->condition('delta', $block['delta'])
+            ->execute();
+    }
 }

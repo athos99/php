@@ -1,0 +1,7 @@
+name = Facet API all
+description = Displays All in search facets
+package = Search Toolkit
+core = 7.x
+dependencies[] = facetapi
+files[] = plugins/facetapi/widget_item_all.inc
+

@@ -1,0 +1,48 @@
+<?php
+/**
+ * (C) M.Bobillier
+ */
+
+/**
+ * Implements hook_facetapi_filters().
+ * declare ItemAll filter for facets
+ */
+function facetapi_all_facetapi_filters()
+{
+    return array(
+        'item_all' => array(
+            'handler' => array(
+                'label' => t('Add all in item list'),
+                'class' => 'FacetapiFilterItemAll',
+            ),
+        ),
+    );
+}
+
+
+/**
+ * Implements hook_facetapi_sort_info().
+ * declare new sort attribut
+ */
+function facetapi_all_facetapi_sort_info()
+{
+    return array('allitem' => array(
+        'label' => t('Item All'),
+        'callback' => 'facetapi_all_sort',
+        'description' => t('Put All item at first.'),
+        'weight' => -50,
+    ));
+
+}
+
+
+/**
+ * Sorts by display value in natural order.
+ */
+function facetapi_all_sort(array $a, array $b)
+{
+    $a= empty($a['#itemall']) ?0 : 1;
+    $b= empty($b['#itemall']) ?0 : 1;
+    return $b - $a;
+}
+

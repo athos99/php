@@ -51,19 +51,21 @@ class similarterms_handler_argument_node_nid extends views_handler_argument_nume
       '#title' => t('Similarity by Terms'),
       '#collapsible' => FALSE,
     );
-    $form['similarterms']['vocabularies'] = array(
+    $form['vocabularies'] = array(
       '#type' => 'checkboxes',
       '#title' => t('Limit similarity to terms within these vocabularies'),
       '#description' => t('Choosing any vocabularies here will limit the terms used to calculate similarity. It is usually best NOT to limit the terms, but in some cases this is necessary. Leave all checkboxes unselected to not limit terms.'),
       '#options' => $vocabularies,
       '#default_value' => empty($this->options['vocabularies']) ? array() : $this->options['vocabularies'],
+      '#fieldset' => 'similarterms'
     );
 
-    $form['similarterms']['include_args'] = array(
+    $form['include_args'] = array(
       '#type' => 'checkbox',
       '#title' => t('Include argument node(s) in results'),
       '#description' => t('If selected, the node(s) passed as the argument will be included in the view results.'),
       '#default_value' => !empty($this->options['include_args']),
+      '#fieldset' => 'similarterms'
     );
 
   }

@@ -58,6 +58,9 @@ function feature_base_wysiwyg_default_profiles() {
         'paste' => array(
           'pasteword' => 1,
         ),
+        'style' => array(
+          'styleprops' => 1,
+        ),
         'wordcount' => array(
           'wordcount' => 1,
         ),
@@ -73,9 +76,9 @@ function feature_base_wysiwyg_default_profiles() {
       'apply_source_formatting' => 0,
       'paste_auto_cleanup_on_paste' => 0,
       'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
-      'css_setting' => 'theme',
+      'css_setting' => 'self',
       'css_path' => '',
-      'css_classes' => '',
+      'css_classes' => 'myphp-evidence',
     ),
     'rdf_mapping' => array(),
   );

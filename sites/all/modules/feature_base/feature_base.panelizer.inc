@@ -131,6 +131,27 @@ function feature_base_panelizer_defaults() {
     $pane->uuid = '15cb3ee6-4157-4974-bed0-47eb1dd1f51d';
     $display->content['new-15cb3ee6-4157-4974-bed0-47eb1dd1f51d'] = $pane;
     $display->panels['right'][0] = 'new-15cb3ee6-4157-4974-bed0-47eb1dd1f51d';
+    $pane = new stdClass();
+    $pane->pid = 'new-eae780dc-9634-4560-985f-aeebb82b37a8';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'views-similar_articles-block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Articles similaires',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'eae780dc-9634-4560-985f-aeebb82b37a8';
+    $display->content['new-eae780dc-9634-4560-985f-aeebb82b37a8'] = $pane;
+    $display->panels['right'][1] = 'new-eae780dc-9634-4560-985f-aeebb82b37a8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;

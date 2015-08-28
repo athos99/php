@@ -56,19 +56,14 @@ function feature_base_filter_default_formats() {
     'weight' => -10,
     'filters' => array(
       'filter_url' => array(
-        'weight' => 0,
+        'weight' => -47,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
       'filter_autop' => array(
-        'weight' => 1,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'filter_htmlcorrector' => array(
-        'weight' => 10,
+        'weight' => -46,
         'status' => 1,
         'settings' => array(),
       ),

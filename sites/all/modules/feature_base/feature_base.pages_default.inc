@@ -128,9 +128,9 @@ function feature_base_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
+      'override_title' => 1,
+      'override_title_text' => 'Articles en  évidence',
+      'override_title_heading' => 'h1',
     );
     $pane->cache = array();
     $pane->style = array();
@@ -149,9 +149,9 @@ function feature_base_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
+      'override_title' => 1,
+      'override_title_text' => 'Les derniers articles',
+      'override_title_heading' => 'h1',
     );
     $pane->cache = array();
     $pane->style = array();
@@ -303,13 +303,14 @@ function feature_base_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
+      'override_title' => 1,
+      'override_title_text' => 'Filtrer par rubrique',
+      'override_title_heading' => 'h3',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'rounded_corners',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -318,6 +319,30 @@ function feature_base_default_page_manager_pages() {
     $pane->uuid = '12bbd729-e2e0-4a8c-8ffd-b8b9d5522269';
     $display->content['new-12bbd729-e2e0-4a8c-8ffd-b8b9d5522269'] = $pane;
     $display->panels['left'][0] = 'new-12bbd729-e2e0-4a8c-8ffd-b8b9d5522269';
+    $pane = new stdClass();
+    $pane->pid = 'new-ce977ac8-c5d8-41be-92cb-ec40a2de6dc1';
+    $pane->panel = 'left';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-lh0RBnSXz85folHApFp6U70S7mJrOYKA';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Filtrer par tag',
+      'override_title_heading' => 'h3',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'rounded_corners',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'ce977ac8-c5d8-41be-92cb-ec40a2de6dc1';
+    $display->content['new-ce977ac8-c5d8-41be-92cb-ec40a2de6dc1'] = $pane;
+    $display->panels['left'][1] = 'new-ce977ac8-c5d8-41be-92cb-ec40a2de6dc1';
     $pane = new stdClass();
     $pane->pid = 'new-a115e638-a996-4b71-a577-1ff041f38cfa';
     $pane->panel = 'right';

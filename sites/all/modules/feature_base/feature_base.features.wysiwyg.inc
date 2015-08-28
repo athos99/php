@@ -48,11 +48,15 @@ function feature_base_wysiwyg_default_profiles() {
           'image' => 1,
           'cleanup' => 1,
           'formatselect' => 1,
+          'styleselect' => 1,
           'sup' => 1,
           'blockquote' => 1,
           'code' => 1,
           'removeformat' => 1,
           'charmap' => 1,
+        ),
+        'paste' => array(
+          'pasteword' => 1,
         ),
         'wordcount' => array(
           'wordcount' => 1,

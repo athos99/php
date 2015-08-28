@@ -3,6 +3,7 @@ description = Language
 core = 7.x
 package = A
 version = 7.x-1.0
+dependencies[] = admin_language
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = l10n_update

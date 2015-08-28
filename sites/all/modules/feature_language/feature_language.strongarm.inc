@@ -172,14 +172,13 @@ admin/reports/status/php',
     'name' => 'French',
     'native' => 'Français',
     'direction' => '0',
-    'enabled' => 1,
+    'enabled' => '1',
     'plurals' => '2',
     'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '-10',
-    'javascript' => 'GmaHgfJ_m_DrkwzczCVt46yhTqOoWboxmEBkbNsCcF4',
-    'provider' => 'language-default',
+    'javascript' => 'V7leExiDZqcuopZzJwKNupq0k_QVrMDXRyoRmrV5Ewg',
   );
   $export['language_default'] = $strongarm;
 

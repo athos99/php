@@ -121,6 +121,32 @@ function feature_base_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-37b0abad-3859-43d5-9cb0-db813b87dfd8';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p class="myphp-evidence">Athos99, PHP et développement WEB est un site qui recense des informations utiles, à travers divers articles et news, sur le développement d’applications WEB en PHP.</p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'naked',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '37b0abad-3859-43d5-9cb0-db813b87dfd8';
+    $display->content['new-37b0abad-3859-43d5-9cb0-db813b87dfd8'] = $pane;
+    $display->panels['right'][0] = 'new-37b0abad-3859-43d5-9cb0-db813b87dfd8';
+    $pane = new stdClass();
     $pane->pid = 'new-a1a24b97-487f-4255-adab-aaab3ad8dd2b';
     $pane->panel = 'right';
     $pane->type = 'block';
@@ -136,37 +162,11 @@ function feature_base_default_page_manager_pages() {
     $pane->style = array();
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'a1a24b97-487f-4255-adab-aaab3ad8dd2b';
     $display->content['new-a1a24b97-487f-4255-adab-aaab3ad8dd2b'] = $pane;
-    $display->panels['right'][0] = 'new-a1a24b97-487f-4255-adab-aaab3ad8dd2b';
-    $pane = new stdClass();
-    $pane->pid = 'new-37b0abad-3859-43d5-9cb0-db813b87dfd8';
-    $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '<h3>Athos99, PHP et développement WEB est un site qui recense des informations utiles, à travers divers articles et news, sur le développement d’applications WEB en PHP.</h3>',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-      'style' => 'naked',
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '37b0abad-3859-43d5-9cb0-db813b87dfd8';
-    $display->content['new-37b0abad-3859-43d5-9cb0-db813b87dfd8'] = $pane;
-    $display->panels['right'][1] = 'new-37b0abad-3859-43d5-9cb0-db813b87dfd8';
+    $display->panels['right'][1] = 'new-a1a24b97-487f-4255-adab-aaab3ad8dd2b';
     $pane = new stdClass();
     $pane->pid = 'new-21ccd4b2-5495-4270-9077-e1af450de03a';
     $pane->panel = 'right';

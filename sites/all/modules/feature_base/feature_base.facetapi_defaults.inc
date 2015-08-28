@@ -130,7 +130,7 @@ function feature_base_facetapi_default_facet_settings() {
   $facet->enabled = FALSE;
   $facet->settings = array(
     'operator' => 'and',
-    'hard_limit' => '50',
+    'hard_limit' => '-1',
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
@@ -325,16 +325,16 @@ function feature_base_facetapi_default_facet_settings() {
       'indexed' => 0,
     ),
     'sort_weight' => array(
+      'allitem' => '-50',
       'display' => '-49',
       'active' => '-48',
-      'allitem' => '-50',
       'count' => '-47',
       'indexed' => '-46',
     ),
     'sort_order' => array(
+      'allitem' => '4',
       'display' => '4',
       'active' => '3',
-      'allitem' => '4',
       'count' => '3',
       'indexed' => '4',
     ),
@@ -387,17 +387,17 @@ function feature_base_facetapi_default_facet_settings() {
       'indexed' => 0,
     ),
     'sort_weight' => array(
+      'allitem' => '-50',
       'active' => '-49',
       'count' => '-48',
       'display' => '-47',
-      'allitem' => '-50',
       'indexed' => '-46',
     ),
     'sort_order' => array(
+      'allitem' => '4',
       'active' => '3',
       'count' => '3',
       'display' => '4',
-      'allitem' => '4',
       'indexed' => '4',
     ),
     'empty_behavior' => 'none',

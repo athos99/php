@@ -2,6 +2,7 @@
 // Variables
 // --------------------------------------------------
 @import url(http://fonts.googleapis.com/css?family=Oswald|Lato|Special+Elite);
+@myphp-color: #962ec1;
 
 //== Colors
 //
@@ -364,15 +365,23 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             #777;
-@navbar-default-bg:                #f8f8f8;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+//@navbar-default-color:             #777;
+@navbar-default-color:             #fff;
+//@navbar-default-bg:                #f8f8f8;
+@navbar-default-bg:   @myphp-color;
+//@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-border:            #000;
 
 // Navbar links
-@navbar-default-link-color:                #777;
-@navbar-default-link-hover-color:          #333;
+//@navbar-default-link-color:                #777;
+@navbar-default-link-color:                #fff;
+
+//@navbar-default-link-hover-color:          #333;
+@navbar-default-link-hover-color:          #aaa;
 @navbar-default-link-hover-bg:             transparent;
-@navbar-default-link-active-color:         #555;
+
+//@navbar-default-link-active-color:         #555;
+@navbar-default-link-active-color:         #fff;
 @navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
@@ -384,7 +393,8 @@
 
 // Navbar toggle
 @navbar-default-toggle-hover-bg:           #ddd;
-@navbar-default-toggle-icon-bar-bg:        #888;
+//@navbar-default-toggle-icon-bar-bg:        #888;
+@navbar-default-toggle-icon-bar-bg:        #fff;
 @navbar-default-toggle-border-color:       #ddd;
 
 

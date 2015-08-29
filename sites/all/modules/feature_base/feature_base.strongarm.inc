@@ -293,150 +293,221 @@ function feature_base_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_article_options';
+  $strongarm->name = 'service_links_append_to_url';
+  $strongarm->value = '';
+  $export['service_links_append_to_url'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_category_types';
+  $strongarm->value = array();
+  $export['service_links_category_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_category_vocs';
+  $strongarm->value = array(
+    1 => 0,
+    2 => 0,
+    3 => 0,
+  );
+  $export['service_links_category_vocs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_check_icons';
+  $strongarm->value = 0;
+  $export['service_links_check_icons'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_hide_for_author';
+  $strongarm->value = 0;
+  $export['service_links_hide_for_author'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_hide_if_unpublished';
+  $strongarm->value = 0;
+  $export['service_links_hide_if_unpublished'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_label_in_node';
+  $strongarm->value = 'Bookmark/Search this post with';
+  $export['service_links_label_in_node'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_link_view_modes';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'token' => 0,
+  );
+  $export['service_links_link_view_modes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_new_window';
+  $strongarm->value = '0';
+  $export['service_links_new_window'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_node_types';
+  $strongarm->value = array(
+    'article' => 'article',
+    'page' => 0,
+    'panel' => 0,
+  );
+  $export['service_links_node_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_node_view_modes';
   $strongarm->value = array(
     'full' => 'full',
     'teaser' => 0,
     'rss' => 0,
     'token' => 0,
   );
-  $export['sharethis_article_options'] = $strongarm;
+  $export['service_links_node_view_modes'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_button_option';
-  $strongarm->value = 'stbc_large';
-  $export['sharethis_button_option'] = $strongarm;
+  $strongarm->name = 'service_links_override_title';
+  $strongarm->value = '0';
+  $export['service_links_override_title'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_comments';
-  $strongarm->value = 0;
-  $export['sharethis_comments'] = $strongarm;
+  $strongarm->name = 'service_links_override_title_text';
+  $strongarm->value = '<title>';
+  $export['service_links_override_title_text'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_late_load';
-  $strongarm->value = 0;
-  $export['sharethis_late_load'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_location';
-  $strongarm->value = 'links';
-  $export['sharethis_location'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_node_types';
-  $strongarm->value = array(
-    'article' => 0,
-    'page' => 0,
-    'panel' => 0,
-  );
-  $export['sharethis_node_types'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_option_extras';
-  $strongarm->value = array(
-    'Google Plus One:plusone' => 0,
-    'Facebook Like:fblike' => 0,
-  );
-  $export['sharethis_option_extras'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_option_neworzero';
-  $strongarm->value = 0;
-  $export['sharethis_option_neworzero'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_option_onhover';
-  $strongarm->value = 1;
-  $export['sharethis_option_onhover'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_option_shorten';
-  $strongarm->value = 1;
-  $export['sharethis_option_shorten'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_page_options';
-  $strongarm->value = array(
-    'full' => 0,
-    'teaser' => 0,
-    'rss' => 0,
-    'token' => 0,
-  );
-  $export['sharethis_page_options'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_panel_options';
-  $strongarm->value = array(
-    'full' => 0,
-    'teaser' => 0,
-    'rss' => 0,
-    'token' => 0,
-  );
-  $export['sharethis_panel_options'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_publisherID';
-  $strongarm->value = 'dr-826bd44-cc23-e050-28f1-ae57ed702030';
-  $export['sharethis_publisherID'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_service_option';
-  $strongarm->value = '"Google +:googleplus","Facebook:facebook","Twitter:twitter","LinkedIn:linkedin"';
-  $export['sharethis_service_option'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_twitter_handle';
+  $strongarm->name = 'service_links_page_match_for_node';
   $strongarm->value = '';
-  $export['sharethis_twitter_handle'] = $strongarm;
+  $export['service_links_page_match_for_node'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_twitter_recommends';
-  $strongarm->value = '';
-  $export['sharethis_twitter_recommends'] = $strongarm;
+  $strongarm->name = 'service_links_path_icons';
+  $strongarm->value = 'sites/all/modules/service_links/images';
+  $export['service_links_path_icons'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_twitter_suffix';
-  $strongarm->value = '';
-  $export['sharethis_twitter_suffix'] = $strongarm;
+  $strongarm->name = 'service_links_short_links_use';
+  $strongarm->value = '0';
+  $export['service_links_short_links_use'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'sharethis_weight';
+  $strongarm->name = 'service_links_show';
+  $strongarm->value = array(
+    'delicious' => 0,
+    'digg' => 0,
+    'stumbleupon' => 0,
+    'twitter' => 1,
+    'pingthis' => 0,
+    'reddit' => 0,
+    'slashdot' => 1,
+    'newsvine' => 0,
+    'furl' => 0,
+    'facebook' => 1,
+    'myspace' => 0,
+    'google' => 0,
+    'google_plus' => 1,
+    'yahoo' => 0,
+    'linkedin' => 1,
+    'technorati' => 1,
+    'technorati_favorite' => 0,
+    'icerocket' => 0,
+    'misterwong' => 0,
+    'mixx' => 0,
+    'box' => 0,
+    'blinklist' => 0,
+    'identica' => 0,
+    'newskicks' => 0,
+    'diigo' => 0,
+    'viadeo' => 0,
+  );
+  $export['service_links_show'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_style';
+  $strongarm->value = '3';
+  $export['service_links_style'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_visibility_for_node';
+  $strongarm->value = '0';
+  $export['service_links_visibility_for_node'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_weight';
+  $strongarm->value = array(
+    'delicious' => '0',
+    'digg' => '0',
+    'stumbleupon' => '0',
+    'twitter' => '0',
+    'pingthis' => '0',
+    'reddit' => '0',
+    'slashdot' => '0',
+    'newsvine' => '0',
+    'furl' => '0',
+    'facebook' => '0',
+    'myspace' => '0',
+    'google' => '0',
+    'google_plus' => '0',
+    'yahoo' => '0',
+    'linkedin' => '0',
+    'technorati' => '0',
+    'technorati_favorite' => '0',
+    'icerocket' => '0',
+    'misterwong' => '0',
+    'mixx' => '0',
+    'box' => '0',
+    'blinklist' => '0',
+    'identica' => '0',
+    'newskicks' => '0',
+    'diigo' => '0',
+    'viadeo' => '0',
+  );
+  $export['service_links_weight'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'service_links_weight_in_node';
   $strongarm->value = '10';
-  $export['sharethis_weight'] = $strongarm;
+  $export['service_links_weight_in_node'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

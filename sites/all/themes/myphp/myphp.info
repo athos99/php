@@ -16,6 +16,8 @@ regions[content]        = 'Content'
 regions[sidebar_first]  = 'Primary'
 regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
+regions[footer_left]    = 'Footer left'
+regions[footer_right]   = 'Footer right'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
 
@@ -44,7 +46,7 @@ stylesheets[all][] = less/style.css
 ; scripts[] = 'bootstrap/js/button.js'
 ; scripts[] = 'bootstrap/js/carousel.js'
 ; scripts[] = 'bootstrap/js/collapse.js'
-; scripts[] = 'bootstrap/js/dropdown.js'
+;scripts[] = 'bootstrap/js/dropdown.js'
 ; scripts[] = 'bootstrap/js/modal.js'
 ; scripts[] = 'bootstrap/js/tooltip.js'
 ; scripts[] = 'bootstrap/js/popover.js'
@@ -53,7 +55,7 @@ stylesheets[all][] = less/style.css
 ; scripts[] = 'bootstrap/js/transition.js'
 ;
 ; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
-; settings[bootstrap_cdn] = ''
+settings[bootstrap_cdn] = ''
 
 
 ; ;-------------------------
@@ -64,5 +66,6 @@ stylesheets[all][] = less/style.css
 ; is overrides to Bootstrap theme settings. Copy them here from the base theme
 ; to override.
 
+scripts[] = 'bootstrap/dist/js/bootstrap.min.js'
 
 scripts[] = 'js/myphp.js'

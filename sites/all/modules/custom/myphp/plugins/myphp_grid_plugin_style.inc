@@ -5,7 +5,7 @@
  */
 class MyphpGridPluginStyle extends views_plugin_style
 {
-    const grid_conf = array(
+    static $grid_conf = array(
         array('name' => 'Large device', 'index' => 'lg', 'active' => true),
         array('name' => 'Medium device', 'index' => 'md', 'active' => true),
         array('name' => 'Small device', 'index' => 'sm', 'active' => false),
@@ -20,7 +20,7 @@ class MyphpGridPluginStyle extends views_plugin_style
     {
         $options = parent::option_definition();
         $options['alignment'] = array('default' => 'horizontal');
-        foreach (self::grid_conf as $grid) {
+        foreach (self::$grid_conf as $grid) {
             $index = $grid['index'];
             $options[$index]['default']['enable'] =  $grid['active'];
             $options[$index]['default']['nb_columns'] = 3;
@@ -37,7 +37,7 @@ class MyphpGridPluginStyle extends views_plugin_style
     {
         $col_options = array(1 => 1, 2 => 2, 3 => 3, 4 => 4, 6 => 6, 12 => 12);
 
-        foreach (self::grid_conf as $grid) {
+        foreach (self::$grid_conf as $grid) {
             $name = $grid['name'];
             $index = $grid['index'];
             $open = !$grid['active'];

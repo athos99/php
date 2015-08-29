@@ -229,6 +229,11 @@ function feature_base_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
+      'full' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
       'teaser' => array(
         'status' => 0,
         'default' => 0,
@@ -290,7 +295,7 @@ function feature_base_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'sharethis_article_options';
   $strongarm->value = array(
-    'full' => 0,
+    'full' => 'full',
     'teaser' => 0,
     'rss' => 0,
     'token' => 0,
@@ -322,7 +327,7 @@ function feature_base_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'sharethis_location';
-  $strongarm->value = 'block';
+  $strongarm->value = 'links';
   $export['sharethis_location'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -330,7 +335,7 @@ function feature_base_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'sharethis_node_types';
   $strongarm->value = array(
-    'article' => 'article',
+    'article' => 0,
     'page' => 0,
     'panel' => 0,
   );

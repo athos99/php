@@ -28,11 +28,9 @@ function feature_base_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '9';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'myphp_grid_plugin_style';
   $handler->display->display_options['style_options']['lg'] = array(
     'enable' => 1,
@@ -115,13 +113,6 @@ function feature_base_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
     t('Block'),
     t('last articles'),
   );
@@ -401,7 +392,6 @@ function feature_base_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
-  $handler->display->display_options['block_description'] = 'sticky articles';
   $handler->display->display_options['block_caching'] = '-1';
   $translatables['sticky_articles'] = array(
     t('Master'),
@@ -413,7 +403,6 @@ function feature_base_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Block'),
-    t('sticky articles'),
   );
   $export['sticky_articles'] = $view;
 

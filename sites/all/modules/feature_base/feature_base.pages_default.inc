@@ -203,7 +203,18 @@ function feature_base_default_page_manager_pages() {
   $page->admin_description = '';
   $page->path = 'rubric/!term';
   $page->access = array();
-  $page->menu = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Articles',
+    'name' => 'main-menu',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
   $page->arguments = array(
     'term' => array(
       'id' => 1,
@@ -255,10 +266,10 @@ function feature_base_default_page_manager_pages() {
         'css_id' => '',
         'css_class' => '',
         'column' => array(
-          'xs' => '2',
-          'sm' => '2',
-          'md' => '2',
-          'lg' => '2',
+          'xs' => 'hidden',
+          'sm' => '4',
+          'md' => '3',
+          'lg' => '3',
         ),
         'offset' => array(
           'xs' => '0',
@@ -283,10 +294,10 @@ function feature_base_default_page_manager_pages() {
         'css_id' => '',
         'css_class' => '',
         'column' => array(
-          'xs' => '10',
-          'sm' => '10',
-          'md' => '10',
-          'lg' => '10',
+          'xs' => '12',
+          'sm' => '8',
+          'md' => '9',
+          'lg' => '9',
         ),
         'offset' => array(
           'xs' => '0',
@@ -392,7 +403,7 @@ function feature_base_default_page_manager_pages() {
     $pane->uuid = 'a115e638-a996-4b71-a577-1ff041f38cfa';
     $display->content['new-a115e638-a996-4b71-a577-1ff041f38cfa'] = $pane;
     $display->panels['right'][0] = 'new-a115e638-a996-4b71-a577-1ff041f38cfa';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;

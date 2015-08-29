@@ -340,7 +340,7 @@ function feature_base_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'service_links_label_in_node';
-  $strongarm->value = 'Bookmark/Search this post with';
+  $strongarm->value = '';
   $export['service_links_label_in_node'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -378,7 +378,7 @@ function feature_base_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'service_links_node_view_modes';
   $strongarm->value = array(
-    'full' => 'full',
+    'full' => 0,
     'teaser' => 0,
     'rss' => 0,
     'token' => 0,

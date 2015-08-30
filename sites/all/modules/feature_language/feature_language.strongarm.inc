@@ -178,7 +178,7 @@ admin/reports/status/php',
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '-10',
-    'javascript' => 'P9KdU-FXju_h0wh9XGbN5oEBUe5ANl3jlG1IAbZN3rs',
+    'javascript' => 'pBgvl15BPQZ20-6gowvJYorFqbITI-XFigLyx6UoCac',
   );
   $export['language_default'] = $strongarm;
 

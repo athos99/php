@@ -7434,3 +7434,9 @@ footer a {
   display: inline-block;
   padding-right: 2px;
 }
+.search-form .views-exposed-widget.views-submit-button {
+  display: none;
+}
+.navbar .views-exposed-form .views-exposed-widget {
+  padding: 0;
+}

@@ -112,6 +112,7 @@
                         <?php if (!empty($primary_nav)): ?>
                             <?php print render($primary_nav); ?>
                         <?php endif; ?>
+                            <?php print $sidebar_search_form; ?>
                         <?php if (!empty($secondary_nav)): ?>
                             <?php print render($secondary_nav); ?>
                         <?php endif; ?>
@@ -145,7 +146,7 @@
             <?php if (!empty($page['highlighted'])): ?>
                 <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
             <?php endif; ?>
-            <?php //if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
+            <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
             <a id="main-content"></a>
             <?php print render($title_prefix); ?>
             <?php if (!empty($title)): ?>
@@ -184,3 +185,19 @@
         </div>
     </div>
 </footer>
+
+
+
+
+
+
+
+<form class="search-form navbar-form navbar-right"
+      action="/drupal/php/fr/search/node"
+      method="post" id="search-form" accept-charset="UTF-8" role="form" _lpchecked="1"><div><div class="container-inline form-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-keys form-group">
+                <label class="element-invisible" for="edit-keys">Search </label>
+                <input placeholder="Search" class="form-control form-text" type="text" id="edit-keys" name="keys" value="" size="20" maxlength="255">
+            </div>
+            <input type="submit" id="edit-submit" name="op" value="Rechercher" class="form-submit btn btn-default btn-primary"></div><input type="hidden" name="form_build_id" value="form-a7dOEfa9B84-lGxW2FZtG733Vq9DDlgT4qQ9p9nn0PI">
+        <input type="hidden" name="form_id" value="search_form">
+    </div></form>

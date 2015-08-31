@@ -27,7 +27,6 @@ header h2 {
   margin: 0 0 10px 0;
 }
 
-
 h1, h1.page-header {
   margin-top: 40px;
 }
@@ -51,12 +50,11 @@ input[type="checkbox"].facetapi-checkbox {
   margin-right: 2px;
 }
 
-h1,header .jumbotron, footer {
-  background:
-  radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .15) 30%, rgba(255, 255, 255, .3) 32%, rgba(255, 255, 255, 0) 33%) -20px -130px,
-  radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .1) 11%, rgba(255, 255, 255, .3) 13%, rgba(255, 255, 255, 0) 14%) -0px -100px,
+h1, header .jumbotron, footer {
+  background: radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .15) 30%, rgba(255, 255, 255, .3) 32%, rgba(255, 255, 255, 0) 33%) -20px -130px,
+    radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .1) 11%, rgba(255, 255, 255, .3) 13%, rgba(255, 255, 255, 0) 14%) -0px -100px,
   radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 17%, rgba(255, 255, 255, .43) 19%, rgba(255, 255, 255, 0) 20%) 0 110px,
-  radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+    radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
   radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 11%, rgba(255, 255, 255, .4) 13%, rgba(255, 255, 255, 0) 14%) 130px 370px,
   radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .1) 11%, rgba(255, 255, 255, .2) 13%, rgba(255, 255, 255, 0) 14%) 0 0,
   linear-gradient(45deg, #962ec1 0%, #a3298e 20%, #389566 30%, #2087a2 40%, #2b32a4 50%, #962ec1 60%, #a3298e 70%, #a42b4a 80%, #d15e32 90%, #f29432 100%);
@@ -68,14 +66,17 @@ h1,header .jumbotron, footer {
   font-family: 'Oswald', sans-serif;
   color: #fff;
 }
+
 .jumbotron h1 {
   font-family: 'Special Elite', "Courier New", monospace;
   background: transparent;
 }
+
 .navbar {
   font-family: 'Oswald', sans-serif;
-font-size: 125%;
+  font-size: 125%;
 }
+
 .myphp-evidence {
   font-size: 150%;
   font-family: 'Special Elite';
@@ -95,12 +96,11 @@ font-size: 125%;
   display: block;
   padding: 8px 0;
   list-style: none;
-  &:hover,&:active {
+  &:hover, &:active {
     text-decoration: underline;
     background-color: transparent;
   }
 }
-
 
 .field-name-field-rubric,
 .field-name-field-tags {
@@ -109,4 +109,12 @@ font-size: 125%;
     display: inline-block;
     padding-right: 2px;
   }
+}
+
+.search-form .views-exposed-widget.views-submit-button {
+  display: none;
+}
+
+.navbar .views-exposed-form .views-exposed-widget {
+  padding: 0;
 }

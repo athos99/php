@@ -14,6 +14,7 @@ header .field-name-field-rubric .field-item {
   text-decoration: none;
 }
 
+.view-search .views-field-field-image,
 .node-article.node-teaser .field-name-field-image {
   display: inline-block;
   padding: 0 3px;
@@ -21,10 +22,19 @@ header .field-name-field-rubric .field-item {
   margin-top: 1px;
 }
 
+.view-search .views-field-title-field h2,
 header h2 {
   border-top: 1px solid #c00;
   border-bottom: 1px solid #c00;
   margin: 0 0 10px 0;
+}
+
+.view-search .views-label {
+  font-weight: bold;
+}
+
+.view-search .views-row {
+  margin-bottom: 15px;
 }
 
 h1, h1.page-header {
@@ -50,7 +60,7 @@ input[type="checkbox"].facetapi-checkbox {
   margin-right: 2px;
 }
 
-h1, header .jumbotron, footer {
+header .jumbotron, footer {
   background: radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .15) 30%, rgba(255, 255, 255, .3) 32%, rgba(255, 255, 255, 0) 33%) -20px -130px,
     radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .1) 11%, rgba(255, 255, 255, .3) 13%, rgba(255, 255, 255, 0) 14%) -0px -100px,
   radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 17%, rgba(255, 255, 255, .43) 19%, rgba(255, 255, 255, 0) 20%) 0 110px,
@@ -59,6 +69,10 @@ h1, header .jumbotron, footer {
   radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .1) 11%, rgba(255, 255, 255, .2) 13%, rgba(255, 255, 255, 0) 14%) 0 0,
   linear-gradient(45deg, #962ec1 0%, #a3298e 20%, #389566 30%, #2087a2 40%, #2b32a4 50%, #962ec1 60%, #a3298e 70%, #a42b4a 80%, #d15e32 90%, #f29432 100%);
   background-size: 470px 470px, 500px 500px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+  background-color: @myphp-color;
+}
+
+h1, header .jumbotron, footer {
   background-color: @myphp-color;
   a {
     color: #fff;
@@ -111,10 +125,31 @@ h1, header .jumbotron, footer {
   }
 }
 
+/*
 .search-form .views-exposed-widget.views-submit-button {
   display: none;
 }
 
-.navbar .views-exposed-form .views-exposed-widget {
-  padding: 0;
+*/
+.navbar .views-exposed-form,
+.navbar .views-exposed-widget {
+  float: none;
+  padding: inherit;
 }
+
+.navbar .views-exposed-widget .form-submit {
+  margin: 0 0 0 -2px;
+  border-radius: 0 15px 15px 0;
+  border: 1px solid #cccccc;
+}
+.navbar input.form-text {
+  margin: 0 -2px 0 0;
+  border-radius:   15px 0 0 15px;
+  border: 1px solid #cccccc;
+}
+
+.navbar div.views-exposed-widget {
+  display: inline-block;
+
+}
+

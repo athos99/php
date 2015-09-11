@@ -70,17 +70,19 @@ function myphp_form_alter(&$form, $form_state, $form_id)
 {
     if ($form_id == 'views_exposed_form' && isset($form['search_api_views_fulltext'])) {
 
-        $form['#info']['filter-search_api_views_fulltext']['label'] = null;
+             $form['#info']['filter-search_api_views_fulltext']['label'] = null;
         $form['search_api_views_fulltext']['#title'] = 'Search';
         $form['search_api_views_fulltext']['#title_display'] = 'invisible';
         $form['search_api_views_fulltext']['#size'] = 20;
         $form['search_api_views_fulltext']['#attributes'] = array('placeholder' => 'Search');
         $form['search_api_views_fulltext']['#attributes']['class'][] = 'form-control';
-        $form['submit']['#value'] = t('Search');
+        $form['submit']['#value'] = '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>';
+        
 
         $form['#attributes']['class'][] = 'search-form';
         $form['#attributes']['class'][] = 'navbar-form';
         $form['#attributes']['class'][] = 'navbar-right';
+        $form['#action']= url('s');
 //        $form['#attributes']['class'][] = 'container-inline';
         //      $form['search_api_views_fulltext']['#attributes'] = array('placeholder' => 'Search');
 //        $form['search_api_views_fulltext']['class'][] = 'form-control';

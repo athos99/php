@@ -95,6 +95,34 @@ function feature_base_facetapi_default_facet_settings() {
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
   $facet->api_version = 1;
+  $facet->name = 'search_api@search_node_index::field_date';
+  $facet->searcher = 'search_api@search_node_index';
+  $facet->realm = '';
+  $facet->facet = 'field_date';
+  $facet->enabled = FALSE;
+  $facet->settings = array(
+    'operator' => 'and',
+    'hard_limit' => '50',
+    'dependencies' => array(
+      'bundle' => 'none',
+      'bundle_selected' => array(),
+      'roles' => array(),
+    ),
+    'facet_mincount' => '1',
+    'facet_missing' => '0',
+    'flatten' => 0,
+    'individual_parent' => 0,
+    'query_type' => 'date',
+    'limit_active_items' => 0,
+    'default_true' => '1',
+    'facet_search_ids' => array(),
+    'date_granularity' => 'MONTH',
+  );
+  $export['search_api@search_node_index::field_date'] = $facet;
+
+  $facet = new stdClass();
+  $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
+  $facet->api_version = 1;
   $facet->name = 'search_api@search_node_index::field_rubric';
   $facet->searcher = 'search_api@search_node_index';
   $facet->realm = '';
@@ -291,6 +319,61 @@ function feature_base_facetapi_default_facet_settings() {
     'show_expanded' => 0,
   );
   $export['search_api@search_node_index:block:created'] = $facet;
+
+  $facet = new stdClass();
+  $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
+  $facet->api_version = 1;
+  $facet->name = 'search_api@search_node_index:block:field_date';
+  $facet->searcher = 'search_api@search_node_index';
+  $facet->realm = 'block';
+  $facet->facet = 'field_date';
+  $facet->enabled = TRUE;
+  $facet->settings = array(
+    'weight' => 0,
+    'widget' => 'facetapi_checkbox_links',
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'item_all' => array(
+        'status' => 1,
+        'weight' => '-49',
+      ),
+    ),
+    'active_sorts' => array(
+      'allitem' => 'allitem',
+      'active' => 'active',
+      'indexed' => 'indexed',
+      'count' => 0,
+      'display' => 0,
+    ),
+    'sort_weight' => array(
+      'allitem' => '-50',
+      'active' => '-49',
+      'count' => '-48',
+      'display' => '-47',
+      'indexed' => '-46',
+    ),
+    'sort_order' => array(
+      'allitem' => '4',
+      'active' => '3',
+      'count' => '3',
+      'display' => '3',
+      'indexed' => '4',
+    ),
+    'empty_behavior' => 'none',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
+    'soft_limit' => '20',
+    'nofollow' => 1,
+    'show_expanded' => 0,
+    'empty_text' => array(
+      'value' => '',
+      'format' => 'full_html',
+    ),
+  );
+  $export['search_api@search_node_index:block:field_date'] = $facet;
 
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */

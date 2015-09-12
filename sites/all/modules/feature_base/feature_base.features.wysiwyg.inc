@@ -55,11 +55,21 @@ function feature_base_wysiwyg_default_profiles() {
           'removeformat' => 1,
           'charmap' => 1,
         ),
+        'autosave' => array(
+          'autosave' => 1,
+        ),
         'paste' => array(
           'pasteword' => 1,
         ),
         'style' => array(
           'styleprops' => 1,
+        ),
+        'table' => array(
+          'tablecontrols' => 1,
+        ),
+        'xhtmlxtras' => array(
+          'cite' => 1,
+          'attribs' => 1,
         ),
         'wordcount' => array(
           'wordcount' => 1,

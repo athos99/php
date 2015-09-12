@@ -7438,11 +7438,14 @@ footer a {
   background-color: transparent;
 }
 .field-name-field-rubric,
-.field-name-field-tags {
-  margin-top: 10px;
+.field-name-field-tags,
+.field-name-field-date {
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 .field-name-field-rubric .field-item,
-.field-name-field-tags .field-item {
+.field-name-field-tags .field-item,
+.field-name-field-date .field-item {
   display: inline-block;
   padding-right: 2px;
 }

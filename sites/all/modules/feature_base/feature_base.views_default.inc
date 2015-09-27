@@ -186,16 +186,16 @@ function feature_base_views_default_views() {
   );
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'teaser';
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Node: Date */
+  /* Sort criterion: Indexed Content: Date */
   $handler->display->display_options['sorts']['field_date']['id'] = 'field_date';
   $handler->display->display_options['sorts']['field_date']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['sorts']['field_date']['field'] = 'field_date';
   $handler->display->display_options['sorts']['field_date']['order'] = 'DESC';
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -268,7 +268,7 @@ function feature_base_views_default_views() {
   $handler->display->display_options['fields']['body_value']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body_value']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body_value']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Content: Title */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
@@ -280,7 +280,7 @@ function feature_base_views_default_views() {
     'title_link' => 'content',
     'title_class' => '',
   );
-  /* Field: Indexed Node: Image */
+  /* Field: Indexed Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -300,7 +300,7 @@ function feature_base_views_default_views() {
   $handler->display->display_options['fields']['search_api_excerpt']['empty'] = '[body_value] ';
   $handler->display->display_options['fields']['search_api_excerpt']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['search_api_excerpt']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Rubrique */
+  /* Field: Indexed Content: Rubrique */
   $handler->display->display_options['fields']['field_rubric']['id'] = 'field_rubric';
   $handler->display->display_options['fields']['field_rubric']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['fields']['field_rubric']['field'] = 'field_rubric';
@@ -308,7 +308,7 @@ function feature_base_views_default_views() {
   $handler->display->display_options['fields']['field_rubric']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_rubric']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_rubric']['bypass_access'] = 0;
-  /* Field: Indexed Node: Tags */
+  /* Field: Indexed Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -328,7 +328,7 @@ function feature_base_views_default_views() {
   $handler->display->display_options['sorts']['search_api_relevance']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['sorts']['search_api_relevance']['field'] = 'search_api_relevance';
   $handler->display->display_options['sorts']['search_api_relevance']['order'] = 'DESC';
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_search_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';

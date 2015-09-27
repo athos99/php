@@ -305,7 +305,7 @@ function googleanalytics_admin_settings_form($form_state) {
   $form['googleanalytics_custom_dimension'] = array(
     '#collapsed' => TRUE,
     '#collapsible' => TRUE,
-    '#description' => t('You can set values for Google Analytics <a href="@custom_var_documentation">Custom Dimensions</a> here. You must have already configured your custom dimensions in the <a href="@setup_documentation">Google Analytics Management Interface</a>. You may use tokens. Global and user tokens are always available; on node pages, node tokens are also available. A dimension <em>value</em> is allowed to have a maximum length of 150 bytes. Expect longer values to get trimmed.', array('@custom_var_documentation' => 'https://developers.google.com/analytics/devguides/collection/analyticsjs/custom-dims-mets', '@setup_documentation' => 'https://support.google.com/analytics/answer/2709829')),
+    '#description' => t('You can set values for Google Analytics <a href="@custom_var_documentation">Custom Dimensions</a> here. You must have already configured your custom dimensions in the <a href="@setup_documentation">Google Analytics Management Interface</a>. You may use tokens. Global and user tokens are always available; on node pages, node tokens are also available. A dimension <em>value</em> is allowed to have a maximum lenght of 150 bytes. Expect longer values to get trimmed.', array('@custom_var_documentation' => 'https://developers.google.com/analytics/devguides/collection/analyticsjs/custom-dims-mets', '@setup_documentation' => 'https://support.google.com/analytics/answer/2709829')),
     '#theme' => 'googleanalytics_admin_custom_var_table',
     '#title' => t('Custom dimensions'),
     '#tree' => TRUE,
@@ -551,7 +551,7 @@ function theme_googleanalytics_admin_custom_var_table($variables) {
   );
 
   $rows = array();
-  foreach (element_children($form['indexes']) as $id) {
+  foreach (element_children($form['indexes']) as $key => $id) {
     $rows[] = array(
       'data' => array(
         drupal_render($form['indexes'][$id]['index']),
@@ -604,7 +604,7 @@ function _googleanalytics_get_forbidden_tokens($value) {
   $invalid_tokens = array();
   $value_tokens = is_string($value) ? token_scan($value) : $value;
 
-  foreach ($value_tokens as $tokens) {
+  foreach ($value_tokens as $type => $tokens) {
     if (array_filter($tokens, '_googleanalytics_contains_forbidden_token')) {
       $invalid_tokens = array_merge($invalid_tokens, array_values($tokens));
     }
@@ -724,7 +724,7 @@ function _googleanalytics_extract_create_field_values($string) {
   $list = array_map('trim', $list);
   $list = array_filter($list, 'strlen');
 
-  foreach ($list as $text) {
+  foreach ($list as $position => $text) {
     // Check for an explicit key.
     $matches = array();
     if (preg_match('/(.*)\|(.*)/', $text, $matches)) {

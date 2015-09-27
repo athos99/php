@@ -41,7 +41,7 @@ function feature_base_field_default_field_instances() {
           'trim_length' => 30,
           'trim_link' => 0,
           'trim_options' => array(
-            'text' => 0,
+            'text' => 'text',
           ),
           'trim_preserve_tags' => '',
           'trim_suffix' => '...',

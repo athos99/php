@@ -7393,17 +7393,18 @@ footer {
   background-size: 470px 470px, 500px 500px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
   background-color: #962ec1;
 }
-h1,
 header .jumbotron,
 footer {
   background-color: #962ec1;
   font-family: 'Oswald', sans-serif;
   color: #fff;
 }
-h1 a,
 header .jumbotron a,
 footer a {
   color: #fff;
+}
+h1 {
+  font-family: 'Oswald', sans-serif;
 }
 .jumbotron h1 {
   font-family: 'Special Elite', "Courier New", monospace;
